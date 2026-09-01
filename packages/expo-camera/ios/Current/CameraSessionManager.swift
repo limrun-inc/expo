@@ -50,7 +50,9 @@ class CameraSessionManager: NSObject {
   }
 
   func updateSessionPreset(preset: AVCaptureSession.Preset) {
-#if !targetEnvironment(simulator)
+    guard hasAvailableCameraDevice else {
+      return
+    }
     if session.canSetSessionPreset(preset) {
       if session.sessionPreset != preset {
         session.beginConfiguration()
@@ -65,7 +67,6 @@ class CameraSessionManager: NSObject {
         session.sessionPreset = .high
       }
     }
-#endif
   }
 
   func updateDevice() {
@@ -240,9 +241,9 @@ class CameraSessionManager: NSObject {
   }
 
   func stopSession() {
-#if targetEnvironment(simulator)
-    return
-#else
+    guard hasAvailableCameraDevice else {
+      return
+    }
     session.beginConfiguration()
     for input in self.session.inputs {
       session.removeInput(input)
@@ -256,7 +257,6 @@ class CameraSessionManager: NSObject {
     if session.isRunning {
       session.stopRunning()
     }
-#endif
   }
 
   func addErrorNotification() {
@@ -291,6 +291,10 @@ class CameraSessionManager: NSObject {
     return captureDeviceInput?.device
   }
 
+  private var hasAvailableCameraDevice: Bool {
+    return AVCaptureDevice.default(for: .video) != nil
+  }
+
   private func addDevice(_ device: AVCaptureDevice) {
     guard let delegate else {
       return
@@ -318,9 +322,9 @@ class CameraSessionManager: NSObject {
   }
 
   private func startSession() {
-#if targetEnvironment(simulator)
-    return
-#else
+    guard hasAvailableCameraDevice else {
+      return
+    }
     guard let delegate else {
       return
     }
@@ -354,6 +358,5 @@ class CameraSessionManager: NSObject {
       delegate?.onCameraReady()
     }
     enableTorch()
-#endif
   }
 }
