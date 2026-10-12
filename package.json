@@ -60,7 +60,8 @@
     "qs@<6.16.0": "^6.16.0",
     "postcss-selector-parser@<7.1.6": "^7.1.6",
     "sharp@<0.35.5": "^0.35.5",
-    "@modelcontextprotocol/sdk@<1.31.0": "^1.31.0"
+    "@modelcontextprotocol/sdk@<1.31.0": "^1.31.0",
+    "http-cache-semantics@<4.3.0": "^4.3.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": "oxfmt --no-error-on-unmatched-pattern --write"
