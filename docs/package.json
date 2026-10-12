@@ -161,7 +161,8 @@
     "overrides": {
       "baseline-browser-mapping": "2.11.21",
       "sharp@<0.35.4": "^0.35.4",
-      "toml@<4.2.0": "^4.2.0"
+      "toml@<4.2.0": "^4.2.0",
+      "postcss-selector-parser@<7.1.6": "^7.1.6"
     },
     "patchedDependencies": {
       "next@16.3.6": "patches/next@16.3.6.patch"
