@@ -25,6 +25,8 @@ loglevel: info
 minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
+  # Approved security fix; keep the exception limited to this release.
+  - node-forge@1.4.1
   - '@expo/*'
   - '@noxcturnal/*'
   - '@react-native/*'
