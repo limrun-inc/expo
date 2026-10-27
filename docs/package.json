@@ -59,8 +59,8 @@
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
-    "@sentry/nextjs": "^10.67.0",
-    "@sentry/react": "^10.67.0",
+    "@sentry/nextjs": "^10.75.2",
+    "@sentry/react": "^10.75.2",
     "@xyflow/react": "^12.10.2",
     "clipboard-copy": "^4.0.1",
     "cmdk": "^1.1.1",
@@ -69,7 +69,7 @@
     "front-matter": "^4.0.2",
     "github-slugger": "^2.0.0",
     "lodash": "^4.18.1",
-    "next": "16.3.8",
+    "next": "16.4.1",
     "nprogress": "0.2.0",
     "path-browserify": "^1.0.1",
     "prism-react-renderer": "^2.4.1",
@@ -161,15 +161,21 @@
     "overrides": {
       "baseline-browser-mapping": "2.11.21",
       "sharp@<0.35.5": "^0.35.5",
-      "toml@<4.2.0": "^4.2.0",
       "postcss-selector-parser@<7.1.6": "^7.1.6",
       "node-forge@<1.4.1": "1.4.1",
       "hono@>=4.0.0 <4.13.11": "4.13.13",
       "markdown-it@>=14.0.0 <14.3.3": "14.3.3",
-      "follow-redirects@<1.16.1": "1.16.1"
+      "follow-redirects@<1.16.1": "1.16.1",
+      "undici@>=7.0.0 <7.30.1": "7.30.1",
+      "fast-uri@>=3.0.0 <3.1.9": "3.1.9",
+      "body-parser@>=2.0.0 <2.4.0": "2.4.0",
+      "ip-address@>=10.0.0 <10.7.4": "10.7.4",
+      "tinypool@>=2.0.0 <2.1.2": "2.1.2",
+      "zod@>=4.0.0 <4.6.7": "4.6.7",
+      "toml@<5.0.1": "5.0.1"
     },
     "patchedDependencies": {
-      "next@16.3.8": "patches/next@16.3.8.patch"
+      "next@16.4.1": "patches/next@16.4.1.patch"
     }
   }
 }

@@ -1,8 +1,7 @@
 diff --git a/dist/build/index.js b/dist/build/index.js
-index 5e826c1..5f355ca 100644
 --- a/dist/build/index.js
 +++ b/dist/build/index.js
-@@ -975,7 +975,7 @@ async function build(dir, experimentalAnalyze = false, reactProductionProfiling
+@@ -964,7 +964,7 @@
                              (0, _trace1.traceMemoryUsage)('Finished server compilation', nextBuildSpan);
                              buildTraceContext = res.buildTraceContext;
                              durationInSeconds += res.duration;
@@ -11,7 +10,7 @@ index 5e826c1..5f355ca 100644
                                  const buildTraceWorker = new _worker.Worker(require.resolve('./collect-build-traces'), {
                                      debuggerPortOffset: -1,
                                      isolatedMemory: false,
-@@ -1624,7 +1624,7 @@ async function build(dir, experimentalAnalyze = false, reactProductionProfiling
+@@ -1658,7 +1658,7 @@
              await writeFunctionsConfigManifest(distDir, functionsConfigManifest);
              // #endregion
              // #region NFT
@@ -21,10 +20,9 @@ index 5e826c1..5f355ca 100644
                      const { collectBuildTraces } = require('./collect-build-traces');
                      return collectBuildTraces({
 diff --git a/dist/esm/build/index.js b/dist/esm/build/index.js
-index 2b211cb..ac978a9 100644
 --- a/dist/esm/build/index.js
 +++ b/dist/esm/build/index.js
-@@ -907,7 +907,7 @@ export default async function build(dir, experimentalAnalyze = false, reactProdu
+@@ -896,7 +896,7 @@
                              traceMemoryUsage('Finished server compilation', nextBuildSpan);
                              buildTraceContext = res.buildTraceContext;
                              durationInSeconds += res.duration;
@@ -33,7 +31,7 @@ index 2b211cb..ac978a9 100644
                                  const buildTraceWorker = new Worker(require.resolve('./collect-build-traces'), {
                                      debuggerPortOffset: -1,
                                      isolatedMemory: false,
-@@ -1556,7 +1556,7 @@ export default async function build(dir, experimentalAnalyze = false, reactProdu
+@@ -1590,7 +1590,7 @@
              await writeFunctionsConfigManifest(distDir, functionsConfigManifest);
              // #endregion
              // #region NFT
